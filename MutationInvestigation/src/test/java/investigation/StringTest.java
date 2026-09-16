@@ -21,6 +21,9 @@ public class StringTest
         assertEquals("Mississippi", river);     // what happened to the original
     }
 
+    /**
+     * Proves that length returns the length of the string without changing it.
+     */
     @Test
     public void lengthReturnsTheLengthOfTheString() {
         String river = "Mississippi";
@@ -29,6 +32,9 @@ public class StringTest
         assertEquals(trueLength, river.length());
     }
 
+    /**
+     * Proves that replace returns a new string and does not change the original.
+     */
     @Test
     public void replaceReturnsTheNewStringAndLeavesTheOriginalAlone() {
         String river = "Mississippi";
@@ -38,6 +44,9 @@ public class StringTest
         assertEquals("Mississippi", river);     // what happened to the original
     }
 
+    /**
+     * Proves that trim returns a new string and does not change the original.
+     */
     @Test
     public void trimReturnsTheNewStringAndLeavesTheOriginalAlone() {
         String helloSpaced = "  Hello, Space !  ";
@@ -47,6 +56,9 @@ public class StringTest
         assertEquals("  Hello, Space !  ", helloSpaced);
     }
 
+    /**
+     * Proves that concat returns a new string and does not change the original.
+     */
     @Test
     public void concatReturnsTheNewStringAndLeavesTheOriginalAlone() {
         String hello = "Hello";
@@ -56,6 +68,9 @@ public class StringTest
         assertEquals("Hello", hello);
     }
 
+    /**
+     * Proves that substring returns a new string and does not change the original.
+     */
     @Test
     public void substringReturnsTheNewStringAndLeavesTheOriginalAlone() {
         String river = "Mississippi";
