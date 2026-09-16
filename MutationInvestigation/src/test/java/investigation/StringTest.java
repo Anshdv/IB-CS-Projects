@@ -38,10 +38,30 @@ public class StringTest
         assertEquals("Mississippi", river);     // what happened to the original
     }
 
-    // TODO: replace("ss", "SS")
-    // TODO: trim()          on "  Hello, Space !  "
-    // TODO: concat(", World!")
-    // TODO: substring(0, 4)
-    //
-    // Every test needs BOTH assertions. Name each test after what it proves.
+    @Test
+    public void trimReturnsTheNewStringAndLeavesTheOriginalAlone() {
+        String helloSpaced = "  Hello, Space !  ";
+        String trimmed = helloSpaced.trim();
+
+        assertEquals("Hello, Space !", trimmed);
+        assertEquals("  Hello, Space !  ", helloSpaced);
+    }
+
+    @Test
+    public void concatReturnsTheNewStringAndLeavesTheOriginalAlone() {
+        String hello = "Hello";
+        String concatenated = hello.concat(", World!");
+
+        assertEquals("Hello, World!", concatenated);
+        assertEquals("Hello", hello);
+    }
+
+    @Test
+    public void substringReturnsTheNewStringAndLeavesTheOriginalAlone() {
+        String river = "Mississippi";
+        String smallRiver = river.substring(0, 4);
+
+        assertEquals("Miss", smallRiver);
+        assertEquals("Mississippi", river);
+    }
 }
