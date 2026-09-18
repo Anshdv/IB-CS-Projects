@@ -17,8 +17,8 @@ public class StringTest
         String river = "Mississippi";
         String shouted = river.toUpperCase();
 
-        assertEquals("MISSISSIPPI", shouted);   // what came back
-        assertEquals("Mississippi", river);     // what happened to the original
+        assertEquals("MISSISSIPPI", shouted);
+        assertEquals("Mississippi", river);
     }
 
     /**
@@ -40,8 +40,8 @@ public class StringTest
         String river = "Mississippi";
         String replaced = river.replace("ss", "SS");
 
-        assertEquals("MiSSiSSippi", replaced);  // what came back
-        assertEquals("Mississippi", river);     // what happened to the original
+        assertEquals("MiSSiSSippi", replaced);
+        assertEquals("Mississippi", river);
     }
 
     /**
