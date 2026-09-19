@@ -15,6 +15,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class StringBuilderTest
 {
+    /**
+     * Proves that length returns the number of characters in the string, without affecting the original string
+     */
     @Test
     public void lengthReturnsTheLengthOfTheStringAndLeavesTheOriginalAlone() {
         StringBuilder sb = new StringBuilder("Mississippi");
@@ -24,6 +27,9 @@ public class StringBuilderTest
         assertEquals("Mississippi", sb.toString());   // original stayed the same
     }
 
+    /**
+     * Proves that append changes the original string by adding on another
+     */
     @Test
     public void appendAddsToTheOriginalString() {
         StringBuilder sb = new StringBuilder("Hello");
@@ -32,6 +38,9 @@ public class StringBuilderTest
         assertEquals("Hello, World", sb.toString());   // original changed
     }
 
+    /**
+     * Proves that insert changes the original string by inserting a substring
+     */
     @Test
     public void insertChangesTheOriginalString() {
         StringBuilder sb = new StringBuilder("Hello");
@@ -40,6 +49,9 @@ public class StringBuilderTest
         assertEquals("Oh, Hello", sb.toString());   // original changed
     }
 
+    /**
+     * Proves that reverse changes the original string by flipping it
+     */
     @Test
     public void reverseFlipsTheOriginalString() {
         StringBuilder sb = new StringBuilder("desserts");
@@ -48,6 +60,9 @@ public class StringBuilderTest
         assertEquals("stressed", sb.toString());   // original changed
     }
 
+    /**
+     * Proves that toString returns the string, without affecting it
+     */
     @Test
     public void toStringReturnsTheOriginalString() {
         StringBuilder sb = new StringBuilder("Hello");
