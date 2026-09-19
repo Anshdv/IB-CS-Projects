@@ -12,21 +12,21 @@ assertion** — not what the documentation says.
 |---|---|---|
 | `String.toUpperCase()` | Accessor | `assertEquals("Mississippi", river)` still passes after the call |
 | `Rectangle.translate()` | Mutator | `assertEquals(20, box.getX())` — the original changed |
-| `String.length()` | Accessor | |
-| `String.replace()` | | |
-| `String.trim()` | | |
-| `String.concat()` | | |
-| `String.substring()` | | |
-| `StringBuilder.length()` | | |
-| `StringBuilder.append()` | | |
-| `StringBuilder.insert()` | | |
-| `StringBuilder.reverse()` | | |
-| `StringBuilder.toString()` | | |
-| `Rectangle.getWidth()` | | |
-| `Rectangle.setSize()` | | |
-| `Rectangle.grow()` | | |
-| `Rectangle.intersection()` | | |
-| `Rectangle.contains()` | | |
+| `String.length()` | Accessor | `assertEquals(trueLength, river.length())` — returns the length without changing the string |
+| `String.replace()` | Accessor | `assertEquals("Mississippi", river)` still passes after the call |
+| `String.trim()` | Accessor | `assertEquals("  Hello, Space !  ", helloSpaced)` still passes after the call |
+| `String.concat()` | Accessor | `assertEquals("Hello", hello)` still passes after the call |
+| `String.substring()` | Accessor | `assertEquals("Mississippi", river)` still passes after the call |
+| `StringBuilder.length()` | Accessor | `assertEquals("Mississippi", sb.toString())` still passes after the call |
+| `StringBuilder.append()` | Mutator | `assertEquals("Hello, World", sb.toString())` — the original changed |
+| `StringBuilder.insert()` | Mutator | `assertEquals("Oh, Hello", sb.toString())` — the original changed |
+| `StringBuilder.reverse()` | Mutator | `assertEquals("stressed", sb.toString())` — the original changed |
+| `StringBuilder.toString()` | Accessor | `assertEquals("Hello", sb.toString())` still passes after the call |
+| `Rectangle.getWidth()` | Accessor | `assertEquals(20, width)` — returns the width without changing the rectangle |
+| `Rectangle.setSize()` | Mutator | `assertEquals(40, box.getWidth())` — the original changed |
+| `Rectangle.grow()` | Mutator | `assertEquals(30, box.getWidth())` — the original changed |
+| `Rectangle.intersection()` | Accessor | `assertEquals(duplicateOfBox1, box1)` still passes after the call |
+| `Rectangle.contains()` | Accessor | `assertEquals(true, containsTenTwenty)` — returns a boolean without changing the rectangle |
 
 ## Object diagram
 
