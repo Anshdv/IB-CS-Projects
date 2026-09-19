@@ -41,5 +41,13 @@ Add your diagram file to this folder and name it here:
 You need at least four commits with real messages. Check yours with:
 
 ```
-git log --oneline
+anshd@MacBook-Pro MutationInvestigation % git log --oneline
+d25e002 (HEAD -> main, origin/main, origin/HEAD) added JavaDoc to stringbuilder
+bddb7f9 finished readme and stringbuilder
+3179c9e finished RectangleTest class
+2be9ffb comments edit
+5c1ceb6 added JavaDoc to StringTest
+dc3ba07 finished StringTest class
+a36e245 two String tests
+833b932 Initial commit
 ```
