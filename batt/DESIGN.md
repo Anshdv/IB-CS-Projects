@@ -54,7 +54,15 @@ The value of this expression is the percentage of battery the phone has.
 
 ## 4. Commit History
 
+ac50941 (HEAD -> main, origin/main, origin/HEAD) added UML
 
+6ee67ee completed PhoneBatteryTest
 
+a9103c9 completed DESIGN.md
 
+fb4d568 completed PhoneBatteryApp
+
+338d43b PhoneBattery commit
+
+2435f59 initial commit
 
