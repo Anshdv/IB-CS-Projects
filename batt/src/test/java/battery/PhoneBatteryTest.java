@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * Tests the PhoneBattery class.
+ * Tests the PhoneBattery class
  */
 public class PhoneBatteryTest
 {
     /**
-     * Proves that a new battery starts completely full.
+     * Proves that a new battery starts completely full
      */
     @Test
     public void newBatteryIsFull()
@@ -20,30 +20,79 @@ public class PhoneBatteryTest
         assertEquals(0, battery.getMinutesUsed());
     }
 
-    // TODO 2: usingThePhoneReducesTheMinutesRemaining
-    //         use(100) on a new battery -> 300 minutes remaining
+    /**
+     * Proves that use() deceases the minutes of charge in the phone
+     */
+    @Test
+    public void usingThePhoneReducesTheMinutesRemaining()
+    {
+        PhoneBattery battery = new PhoneBattery();
+        battery.use(100);
 
-    // TODO 3: chargingIncreasesTheMinutesRemaining
-    //         use(300) then charge(100) -> 200 minutes remaining
+        assertEquals(300, battery.getMinutesRemaining());
+    }
 
-    // TODO 4: usedAndRemainingStayInStep
-    //         use(150) -> 150 used AND 250 remaining.
-    //         Two assertions. If these disagree, your class stores
-    //         both numbers and forgot to update one of them.
+    /**
+     * Proves that charge() adds to the minutes of charge in the phone
+     */
+    @Test
+    public void chargingIncreasesTheMinutesRemaining()
+    {
+        PhoneBattery battery = new PhoneBattery();
+        battery.use(300);
+        battery.charge(100);
 
-    // TODO 5: percentRemainingAfterUse
-    //         use(100) -> 75.0 percent
-    //
-    //         assertEquals on a double needs a THIRD value:
-    //             assertEquals(75.0, battery.getPercentRemaining(), 0.001);
+        assertEquals(200, battery.getMinutesRemaining());
+    }
 
-    // TODO 6: percentRemainingThatIsNotAWholeNumber
-    //         use(1) -> 99.75 percent
+    /**
+     * Proves that the number of minutes the phone was used and the number of minutes of charge remaining stay in step
+     */
+    @Test
+    public void usedAndRemainingStayInStep()
+    {
+        PhoneBattery battery = new PhoneBattery();
+        battery.use(150);
 
-    // TODO 7: usingThenChargingReturnsToTheExpectedLevel
-    //         use(320) then charge(120) -> 200 remaining, 50.0 percent
+        assertEquals(150, battery.getMinutesUsed());
+        assertEquals(250, battery.getMinutesRemaining());
+    }
 
-    // Run your tests WITH COVERAGE. You need 100% on PhoneBattery.
-    // Coverage only proves every line ran. Your assertions still have
-    // to check the right values.
+    /**
+     * Proves that each minute of use depletes the percentage by 0.25
+     */
+    @Test
+    public void percentRemainingAfterUse()
+    {
+        PhoneBattery battery = new PhoneBattery();
+        battery.use(100);
+
+        assertEquals(75.0, battery.getPercentRemaining(), 0.0001);
+    }
+
+    /**
+     * Proves that the battery percentage is not always a whole number
+     */
+    @Test
+    public void percentRemainingThatIsNotAWholeNumber()
+    {
+        PhoneBattery battery = new PhoneBattery();
+        battery.use(1);
+
+        assertEquals(99.75, battery.getPercentRemaining(), 0.0001);
+    }
+
+    /**
+     * Proves that the battery percentage is in step with the number of minutes of charge after using and charging
+     */
+    @Test
+    public void usingThenChargingReturnsToTheExpectedLevel()
+    {
+        PhoneBattery battery = new PhoneBattery();
+        battery.use(320);
+        battery.charge(120);
+
+        assertEquals(200, battery.getMinutesRemaining());
+        assertEquals(50.0, battery.getPercentRemaining(), 0.0001);
+    }
 }
