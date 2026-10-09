@@ -1,30 +1,42 @@
 package battery;
 
 /**
- * TODO: Write class-level Javadoc here. Add your name.
+ * The PhoneBatteryApp allows the user to control their phone battery
  */
 public class PhoneBatteryApp
 {
     /**
-     * Demonstrates every method of PhoneBattery.
-     *
      * @param args not used
+     * Demonstrates every method of PhoneBattery
      */
     public static void main(String[] args)
     {
         PhoneBattery battery = new PhoneBattery();
 
-        System.out.println("New battery:        "
+        System.out.println("New battery:                         "
             + battery.getMinutesRemaining() + " remaining, "
             + battery.getMinutesUsed() + " used, "
             + battery.getPercentRemaining() + "%");
 
-        // TODO: call use(100) and print the same three values.
+        battery.use(100);
 
-        // TODO: call use(260) and print again.
+        System.out.println("After using for 100 minutes:         "
+                + battery.getMinutesRemaining() + " remaining, "
+                + battery.getMinutesUsed() + " used, "
+                + battery.getPercentRemaining() + "%");
 
-        // TODO: call charge(160) and print again.
+        battery.use(260);
 
-        // Label every line so a reader can tell what happened.
+        System.out.println("After using for 260 more minutes:    "
+                + battery.getMinutesRemaining() + " remaining, "
+                + battery.getMinutesUsed() + " used, "
+                + battery.getPercentRemaining() + "%");
+
+        battery.charge(160);
+
+        System.out.println("After charging for 160 minutes:      "
+                + battery.getMinutesRemaining() + " remaining, "
+                + battery.getMinutesUsed() + " used, "
+                + battery.getPercentRemaining() + "%");
     }
 }
