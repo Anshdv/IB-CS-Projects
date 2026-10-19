@@ -1,11 +1,16 @@
 public class Leg
 {
-    private double distance;
+    public static double totalDistance;
+    public static int currentMinutes;
+
+    private int distance;
     private int averageSpeed;
 
-    public Leg(double inputDistance, int inputAverageSpeed) {
+    public Leg(int inputDistance, int inputAverageSpeed) {
         distance = inputDistance;
         averageSpeed = inputAverageSpeed;
+        totalDistance += distance;
+        currentMinutes += getDriveMinutes();
     }
 
     public double getMiles() {
@@ -13,7 +18,7 @@ public class Leg
     }
 
     public int getDriveMinutes() {
-        double driveMinutes = distance /  averageSpeed;
+        int driveMinutes = (distance / 60) + (distance % 60);
         return (int) Math.round(driveMinutes);
     }
 
