@@ -1,0 +1,31 @@
+HOW THE PIECES MOVE
+===================
+You do not need to know chess to finish this assignment. Everything
+you need is here. The board is empty except for the piece that is
+moving, so you never have to worry about anything being in the way.
+
+Squares are named by a file letter a-h and a rank number 1-8, like e4.
+White pawns move toward rank 8. Black pawns move toward rank 1.
+
+  KNIGHT   Two squares one way and one square the other, in an L.
+           b1 to c3 is legal. b1 to d2 is also legal.
+           e4 to g6 is NOT legal - that is two and two, not two and one.
+
+  ROOK     Any distance along a rank or a file, but not both.
+           a1 to a8 legal. a1 to h1 legal. a1 to b2 not legal.
+
+  BISHOP   Any distance along a diagonal.
+           c1 to h6 legal. c1 to c5 not legal.
+
+  QUEEN    Anything a rook can do, or anything a bishop can do.
+
+  KING     One square in any direction.
+
+  PAWN     The complicated one. It moves and captures differently.
+           Not capturing: one square straight forward. OR two squares
+             straight forward, but only from its starting rank
+             (rank 2 for white, rank 7 for black).
+           Capturing: one square diagonally forward. Never straight.
+           A pawn can never move backwards.
+
+NO PIECE MAY "MOVE" TO THE SQUARE IT IS ALREADY ON.

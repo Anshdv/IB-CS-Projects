@@ -1,0 +1,33 @@
+THE FLOWCHART  -  Section 5.5
+=============================
+You will draw one flowchart, for isLegalPawn. Draw it BEFORE you
+write that method. That is the point of the exercise: a flowchart is
+a thinking tool, not a picture of code you already finished.
+
+SYMBOLS
+  Oval          start and end
+  Diamond       a decision. Exactly two arrows leave it, labeled
+                true and false. Never three.
+  Rectangle     an action or a result
+  Arrow         the order things happen in
+
+WHAT YOURS MUST SHOW
+  Every path through isLegalPawn, including:
+    - whether this is a capture
+    - which direction this color moves
+    - the one-square move
+    - the two-square move and the starting-rank condition
+    - every way the method can return false
+
+HOW TO CHECK IT
+  Pick a move, such as black e7 to e5. Put your finger on the start
+  oval and follow one arrow at a time. If you reach an end with the
+  right answer, that path works. Do this for at least four different
+  moves before you draw anything in Java.
+
+  If you find a path with no answer at the end of it, you found a
+  bug in your thinking before it cost you anything. That is the
+  whole reason this step exists.
+
+SUBMIT IT
+  On paper, photographed, or from any tool. Hand drawn is fine.
