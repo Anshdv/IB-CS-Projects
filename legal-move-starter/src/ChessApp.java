@@ -6,8 +6,9 @@ import java.util.Scanner;
  */
 public class ChessApp {
     /**
-     * Asks for the piece, the starting square, and the destination.
-     * A pawn is also asked for its color and whether the move is a capture.
+     * Asks for the piece, the starting square, and the destination
+     * A pawn is also asked for its color and whether the move is a capture
+     * The user is told if the piece can make the move
      * @param args not used
      */
     public static void main(String[] args) {
